@@ -20,6 +20,7 @@
 
 ### 2. list.c
 ![list](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/lsit.png)
+
 -int List()
 •리스트 출력
 	: 파일을 열어서 fgets 함수를 반복적으로 수행하면서 데이터 중 이름 부분만을 선택해서 화면에 출력한다.
