@@ -39,45 +39,63 @@
 		: 삭제 여부를 물어본 후 삭제/세부내용 출력 실행
 
 - int list_selector()
-  	- 메뉴와 같은 방식 사용하여 각 항목을 선택하고, 선택한 항목의 순서를 반환
+
+  	: 메뉴와 같은 방식 사용하여 각 항목을 선택하고, 선택한 항목의 순서를 반환
 
 - void detail()
 
+	: 선택된 항목의 순서를 받아와서 data.txt 파일의 해당 순서의 내용을 받아와 name, number, memo를 조각내서 세부 내용을 출력
+
 ![detail](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/detail.png)
 	
- : 선택된 항목의 순서를 받아와서 data.txt 파일의 해당 순서의 내용을 받아와 name, number, memo를 조각내서 세부 내용을 출력
 
--void del_content()
+- void del_content()
+
 ![delete](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/delete.png)
+
 ![deleted](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/delete.png)
+
 	: 삭제하기로 선택된 항목의 순서를 받아와서 data.txt 파일의 해당 순서 이후의 내용을 한칸 당겨서 저장함으로써 해당 데이터를 삭제
 
 ### 3. search.c
+
 ![search](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/search.png)
+
 ![search_success](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/search_success.png)
+
 ![cannot_find](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/cannot_find.png)
--int search()
+
+- int search()
+
 	: 필드를 사용해 이름을 입력받아 해당 내용을 찾는 함수, 찾는 내용이 있다면 해당 내용의 세부사항을 출력, 없다면 오류를 출력. 방식은 순차 검색 사용
 
--int search_where()
+- int search_where()
+
 	: 받아온 이름 데이터를 바탕으로 해당 이름의 데이터가 data.txt에서 몇 번째 줄에 있는지 받아오는 함수
-fgets로 받아온 각 줄에서 ‘:’ 전까지의 내용만 가지고 와서 이름 데이터와 비교를 통해 검색을 진행
+	- fgets로 받아온 각 줄에서 ‘:’ 전까지의 내용만 가지고 와서 이름 데이터와 비교를 통해 검색을 진행
 
 ### 4. add.c
+
 ![add](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/add.png)
+
 ![added](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/added.png)
--void add_form()
+
+- void add_form()
+
 	: 데이터 추가를 위해 form을 사용해 name field, number field, memo field를 생성, 각 필드에서 받아온 데이터를 하나의 ‘:’로 구분된 문자열로 합침, 저장을 진행, 저장 후 정렬을 진행한다.
- 입력이 없었다면 데이터 저장을 취소하고 종료.
+	- 입력이 없었다면 데이터 저장을 취소하고 종료.
 
 -void trin_whitespace()
+
 	: 데이터를 합치고 저장 할 때 불필요한 공백을 제거하고 마지막에 ‘\0’를 추가해준다.
 
 
 ### 5. sort.c
--int sort()
-	:data.txt 파일의 내용을 모두 sorting_arr에 저장한다. sorting_arr의 크기는 100개 이상의 내용을 다루기 위해 동적 할당을 사용한다.
- 모든 데이터가 든 sorting_arr에 대해 stdlib 헤더의 qsort 함수를 실행, 정렬된 sorting_arr를 다시 data.txt에 저장하고 종료
+- int sort()
 
--int compare()
+	:data.txt 파일의 내용을 모두 sorting_arr에 저장한다. sorting_arr의 크기는 100개 이상의 내용을 다루기 위해 동적 할당을 사용한다.
+	- 모든 데이터가 든 sorting_arr에 대해 stdlib 헤더의 qsort 함수를 실행, 정렬된 sorting_arr를 다시 data.txt에 저장하고 종료
+
+- int compare()
+
 	:qsort 함수를 실행함에 필요한 비교 함수, strcmp 함수를 통해 비교한다.
