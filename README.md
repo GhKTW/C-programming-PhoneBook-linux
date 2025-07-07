@@ -56,7 +56,6 @@
 ![deleted](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/delete.png)
 
 	: 삭제하기로 선택된 항목의 순서를 받아와서 data.txt 파일의 해당 순서 이후의 내용을 한칸 당겨서 저장함으로써 해당 데이터를 삭제
-
 ### 3. search.c
 
 ![search](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/search.png)
