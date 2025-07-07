@@ -13,7 +13,8 @@
 ![main_page](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/main_page.png)
 
 - int main()
-	- stdscr에 menu_open을 호출하여 명령을 선택할 수 있게 함. 반복문 속에서 선택된 각 명령을 수행하고 나오면 다시 menu_open을 실행하도록 하여 초기 화면을 구축함.
+
+	: stdscr에 menu_open을 호출하여 명령을 선택할 수 있게 함. 반복문 속에서 선택된 각 명령을 수행하고 나오면 다시 menu_open을 실행하도록 하여 초기 화면을 구축함.
 
 - int menu_open()
 	- List, Search 등 내릴 명령을 선택할 수 있는 선택창을 생성, 엔터를 입력하면 choice 변수를 통해 선택한 항목에 대한 integer 반환
