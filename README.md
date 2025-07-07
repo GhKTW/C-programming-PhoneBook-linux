@@ -11,6 +11,7 @@
 
 ### 1. main.c
 ![main_page](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/main_page.png)
+
 -int main()
 : stdscr에 menu_open을 호출하여 명령을 선택할 수 있게 함. 반복문 속에서 선택된 각 명령을 수행하고 나오면 다시 menu_open을 실행하도록 하여 초기 화면을 구축함.
 
