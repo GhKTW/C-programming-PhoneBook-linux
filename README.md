@@ -51,11 +51,12 @@
 
 - void del_content()
 
+	: 삭제하기로 선택된 항목의 순서를 받아와서 data.txt 파일의 해당 순서 이후의 내용을 한칸 당겨서 저장함으로써 해당 데이터를 삭제
+
 ![delete](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/delete.png)
 
 ![deleted](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/delete.png)
 
-	: 삭제하기로 선택된 항목의 순서를 받아와서 data.txt 파일의 해당 순서 이후의 내용을 한칸 당겨서 저장함으로써 해당 데이터를 삭제
 ### 3. search.c
 
 ![search](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/search.png)
@@ -84,10 +85,9 @@
 	: 데이터 추가를 위해 form을 사용해 name field, number field, memo field를 생성, 각 필드에서 받아온 데이터를 하나의 ‘:’로 구분된 문자열로 합침, 저장을 진행, 저장 후 정렬을 진행한다.
 	- 입력이 없었다면 데이터 저장을 취소하고 종료.
 
--void trin_whitespace()
+- void trim_whitespace()
 
 	: 데이터를 합치고 저장 할 때 불필요한 공백을 제거하고 마지막에 ‘\0’를 추가해준다.
-
 
 ### 5. sort.c
 - int sort()
