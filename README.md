@@ -12,30 +12,30 @@
 ### 1. main.c
 ![main_page](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/main_page.png)
 
--int main()
+- int main()
 : stdscr에 menu_open을 호출하여 명령을 선택할 수 있게 함. 반복문 속에서 선택된 각 명령을 수행하고 나오면 다시 menu_open을 실행하도록 하여 초기 화면을 구축함.
 
--int menu_open()
+- int menu_open()
 : List, Search 등 내릴 명령을 선택할 수 있는 선택창을 생성, 엔터를 입력하면 choice 변수를 통해 선택한 항목에 대한 integer 반환
 
 ### 2. list.c
 ![list](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/lsit.png)
 
--int List()
-•리스트 출력
-	: 파일을 열어서 fgets 함수를 반복적으로 수행하면서 데이터 중 이름 부분만을 선택해서 화면에 출력한다.
-각 줄을 fgets 하면서 받아온 내용이 없으면 ‘------’를 출력
-•출력된 이름 중 특정 항목 선택
-	: 해당 이름 데이터의 세부 내용을 출력
-•왼, 오른쪽 화살표 입력 받기
-	: 페이지 넘김 기능 실행
-•특정 이름에 대해 d 입력
-	: 삭제 여부를 물어본 후 삭제/세부내용 출력 실행
+- int List()
+	- 리스트 출력
+		: 파일을 열어서 fgets 함수를 반복적으로 수행하면서 데이터 중 이름 부분만을 선택해서 화면에 출력한다.
+		각 줄을 fgets 하면서 받아온 내용이 없으면 ‘------’를 출력
+	- 출력된 이름 중 특정 항목 선택
+		: 해당 이름 데이터의 세부 내용을 출력
+	- 왼, 오른쪽 화살표 입력 받기
+		: 페이지 넘김 기능 실행
+	- 왼, 오른쪽 화살표 입력 받기특정 이름에 대해 d 입력
+		: 삭제 여부를 물어본 후 삭제/세부내용 출력 실행
 
--int list_selector()
+- int list_selector()
 	: 메뉴와 같은 방식 사용하여 각 항목을 선택하고, 선택한 항목의 순서를 반환
 
--void detail()
+- void detail()
 ![detail](https://github.com/GhKTW/C-programming-PhoneBook-linux/blob/main/image/detail.png)
 	: 선택된 항목의 순서를 받아와서 data.txt 파일의 해당 순서의 내용을 받아와 name, number, memo를 조각내서 세부 내용을 출력
 
